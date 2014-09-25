@@ -1,0 +1,92 @@
+Requiem version 4.1
+
+
+TO USE:
+
+Double-click on the Requiem application and watch it work!
+It will automatically find DRMed files in your iTunes library
+and remove the DRM from them.
+
+The original DRMed files will be moved to the trash.  Make sure you
+verify that the songs and videos still work before emptying
+the trash.
+
+Windows users will need to install Java.
+
+You can also drag & drop files or directories (which will be searched
+recursively) onto the Requiem application or the Requiem window.
+
+Starting Requiem with the shift key down will disable scanning of the
+iTunes library.  You can use this feature to start requiem with a
+blank window into which you can drag & drop files to be processed.
+
+
+HOW IT WORKS:
+
+Requiem decrypts the audio and video data in your file exactly
+like iTunes does:
+
+1.  Requiem authenticates with the DRM library using the secret
+    credentials used by iTunes.
+
+2.  Requiem uses the decrypt routines in the DRM library to decrypt
+    all of the audio and video data.
+
+
+CHANGES FROM PREVIOUS VERSIONS:
+
+There is no longer a key cache.
+
+
+WARNING:
+
+This program is not intended to promote piracy.  I just wanted to play
+my iTunes songs on a SlimServer!  As such, the output file is only
+minimally modified to remove the DRM.  It still has lots of
+information in it identifying you.
+
+
+ACKNOWLEDGEMENTS:
+
+Thanks to Pants Man for helping with the Mac droplet.
+
+Thanks to various folks for prodding and hints on the Windows version.
+
+Thanks to Razzmatazz for the Java GUI.
+
+
+BUGS:
+
+Please report any bugs you find to the website below.  Requiem keeps a
+log of the most recent run in ~/Library/Logs/Requiem.log (Mac) or
+%APPDATA%\Requiem.log (Windows) which might be useful for debugging.
+
+
+NOTES:
+
+Requiem has a Tor website: http://tag3ulp55xczs3pn.onion.  To reach
+the site using Tor, you will need to install Tor
+(http://www.torproject.org).  If you're willing to sacrifice your
+anonymity, you can use the regular web with tor2web.  Just go to
+http://tag3ulp55xczs3pn.tor2web.com.
+
+Please redistribute!
+
+
+COMMAND LINE:
+
+You can run Requiem a bunch of different ways from the command line (Mac examples):
+
+run it as usual:
+    java -cp Requiem.app/Contents/Resources/Java/Requiem.jar Requiem
+
+deDRM a single file:
+    java -cp Requiem.app/Contents/Resources/Java/Requiem.jar UnDrm <input file> <output file>
+
+print mp4 structure of a file:
+    java -cp Requiem.app/Contents/Resources/Java/Requiem.jar Mp4 <file>
+
+print configuration info:
+    java -cp Requiem.app/Contents/Resources/Java/Requiem.jar Config
+
+request more memory: add "-Xmx1024m" (or whatever number of megabytes you want)

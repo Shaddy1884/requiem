@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This Ant script is used just for calling JarBundler to build
+     a native OSX application.  You must download and install the Ant
+     JarBundler first.
+-->
+
+<project name="requiem" basedir=".">
+
+  <taskdef name="jarbundler" classname="net.sourceforge.jarbundler.JarBundler"/>
+
+  <target name="bundle">
+    <jarbundler dir="."
+                name="Requiem"
+                mainclass="Requiem"
+                icon="requiem.icns"
+                jar="Requiem.jar"
+		vmoptions="-Xmx1024m"
+	        version="4.1">
+      <documenttype name="DRMed files"
+                    ostypes="****"
+                    role="Viewer"/>
+    </jarbundler>
+  </target>
+
+</project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This Ant script is used just for calling Launch4j to build
+     a native Windows application.  You must download and install
+     Launch4j for Ant first.
+-->
+
+<project name="requiem" basedir=".">
+
+  <taskdef name="launch4j" classname="net.sf.launch4j.ant.Launch4jTask"/>
+
+  <target name="bundle">
+    <launch4j>
+      <config headerType="gui" outfile="Requiem.exe" jar="Requiem.jar" icon="requiem.ico">
+        <classPath mainClass="Requiem">
+          <cp>Requiem.jar</cp>
+        </classPath>
+        <jre minVersion="1.5.0" maxHeapSize="1024"/>
+        <versionInfo fileVersion="4.1.0.0" txtFileVersion="4.1" fileDescription="Requiem" copyright="public domain" productVersion="4.1.0.0" txtProductVersion="4.1" productName="Requiem" internalName="Requiem" originalFileName="Requiem.exe"/>
+      </config>
+    </launch4j>
+  </target>
+
+</project>

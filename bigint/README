@@ -1,0 +1,64 @@
+
+                            C++ Big Integer Library
+                          (see ChangeLog for version)
+
+                        http://mattmccutchen.net/bigint/
+
+       Written and maintained by Matt McCutchen <matt@mattmccutchen.net>
+
+You can use this library in a C++ program to do arithmetic on integers of size
+limited only by your computer's memory.  The library provides BigUnsigned and
+BigInteger classes that represent nonnegative integers and signed integers,
+respectively.  Most of the C++ arithmetic operators are overloaded for these
+classes, so big-integer calculations are as easy as:
+
+    #include "BigIntegerLibrary.hh"
+    
+    BigInteger a = 65536;
+    cout << (a * a * a * a * a * a * a * a);
+    
+    (prints 340282366920938463463374607431768211456)
+
+The code in `sample.cc' demonstrates the most important features of the library.
+To get started quickly, read the code and explanations in that file and run it.
+If you want more detail or a feature not shown in `sample.cc', consult the
+consult the actual header and source files, which are thoroughly commented.
+
+This library emphasizes ease of use and clarity of implementation over speed;
+some users will prefer GMP (http://swox.com/gmp/), which is faster.  The code is
+intended to be reasonably portable across computers and modern C++ compilers; in
+particular, it uses whatever word size the computer provides (32-bit, 64-bit, or
+otherwise).
+
+Compiling programs that use the library
+---------------------------------------
+The library consists of a folder full of C++ header files (`.hh') and source
+files (`.cc').  `#include' header files and compile with source files as
+necessary for your own programs.  A Makefile is included that compiles the
+library source files and the sample program and links them together; you can
+easily customize the Makefile to replace the sample with your own program, or
+you can write your own Makefile.
+
+Resources
+---------
+The library's Web site (above) provides links to released versions, the current
+development version, and a mailing list for release announcements, questions,
+bug reports, and other discussion of the library.  I would be delighted to hear
+from you if you like this library and/or find a good use for it.
+
+Bugs and enhancements
+---------------------
+The library has been tested by me and others but is by no means bug-free.  If
+you find a bug, please report it, whether it comes in the form of compiling
+trouble, a mathematically inaccurate result, or a memory-management blooper
+(since I use Java, these are altogether too common in my C++).  I generally fix
+all reported bugs.  You are also welcome to request enhancements, but I am
+unlikely to do substantial amounts of work on enhancements at this point.
+
+Legal
+-----
+I, Matt McCutchen, the sole author of the original Big Integer Library, waive my
+copyright to it, placing it in the public domain.  The library comes with
+absolutely no warranty.
+
+~~~~
