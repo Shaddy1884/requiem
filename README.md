@@ -21,3 +21,6 @@ NOTE: This program is not meant for you to keep a permanent copy of the DRM-Free
 
 Any other use of this program may not be classified as legal, and is the full responsibility of the person(s) utilising the program for the unapproved practice.
 
+=======
+
+N.B. This program does not currently work with the latest version of iTunes.
